@@ -4,7 +4,7 @@
 #include "i2c.h"
 
 
-static void read_calib_data (bmpData * bmp)
+void read_calib_data (bmpData * bmp)
 {
 	bmp->err = NO_ERR;
 	uint8_t out_buff[BMP_CALIB_DATA_SIZE] = {0};
@@ -29,7 +29,7 @@ static void read_calib_data (bmpData * bmp)
 		}
 }
 
-static void read_chip_id (bmpData * bmp)
+void read_chip_id (bmpData * bmp)
 {
 	uint8_t rst_buff[3];
 	uint8_t out_buff = 0;
@@ -46,7 +46,7 @@ static void read_chip_id (bmpData * bmp)
 	}
 }
 
-static void set_oss (bmpOss * oss, bmpOssRatio ratio)
+void set_oss (bmpOss * oss, bmpOssRatio ratio)
 {
 	uint8_t in_buff[2] = {0};
 
@@ -100,7 +100,7 @@ void init_bmp (bmpData * bmp)
 	HAL_Delay(50);
 	read_calib_data(bmp);
 	
-	set_oss (&bmp->oss, HIGH);
+	set_oss (&bmp->oss, 1);
 }
 
 

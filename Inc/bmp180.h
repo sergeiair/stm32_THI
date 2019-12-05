@@ -62,7 +62,7 @@
 #define BMP_MIN_ALT_THRESHOLD				(-500)	// m. relating to sea level)
 #define BMP_MAX_ALT_THRESHOLD				(9000U)	// m. relating to sea level)
 
-struct bmpCalibParams
+typedef struct
 {
 	int16_t	 AC1;
 	int16_t  AC2;
@@ -75,15 +75,15 @@ struct bmpCalibParams
 	int16_t  MB;
 	int16_t  MC;
 	int16_t  MD;
-};
+} bmpCalibParams;
 
-struct bmpMeasurementData
+typedef struct
 {
 	float temp;
 	float altitude;
 	int32_t press;
 	int32_t B5;
-};
+} bmpMeasurementData;
 
 typedef enum
 {
@@ -111,18 +111,18 @@ typedef enum
 
 typedef struct
 {
-	struct bmpCalibParams calib;
-	struct bmpMeasurementData uncompData;
-	struct bmpMeasurementData compData;
+	bmpCalibParams calib;
+	bmpMeasurementData uncompData;
+	bmpMeasurementData compData;
 	bmpOss oss;
 	bmpError err;
 } bmpData;
 
-static void read_calib_data (bmpData * bmp);
+void read_calib_data (bmpData * bmp);
 
-static void read_chip_id (bmpData * bmp);
+void read_chip_id (bmpData * bmp);
 
-static void set_oss (bmpOss * oss, bmpOssRatio ratio);
+void set_oss (bmpOss * oss, bmpOssRatio ratio);
 
 void clean_up_bmp(bmpData * bmp);
 
@@ -131,4 +131,8 @@ void init_bmp (bmpData * bmp);
 void read_comp_temp(bmpData * bmp);
 
 void read_uncomp_temp (bmpData * bmp);
+
+void read_uncomp_temp (bmpData * bmp);
+
+
 

@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;   ../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,6 +393,26 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
+              <FileName>bmp180.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bmp180.c</FilePath>
+            </File>
+            <File>
+              <FileName>htu21.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\htu21.c</FilePath>
+            </File>
+            <File>
+              <FileName>fonts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\fonts.c</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1306.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\ssd1306.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -423,24 +443,9 @@
               <FilePath>../Src/stm32f1xx_hal_msp.c</FilePath>
             </File>
             <File>
-              <FileName>bmp180.c</FileName>
+              <FileName>ind.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bmp180.c</FilePath>
-            </File>
-            <File>
-              <FileName>htu21.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\htu21.c</FilePath>
-            </File>
-            <File>
-              <FileName>fonts.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\fonts.c</FilePath>
-            </File>
-            <File>
-              <FileName>ssd1306.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\ssd1306.c</FilePath>
+              <FilePath>..\Src\ind.c</FilePath>
             </File>
           </Files>
         </Group>

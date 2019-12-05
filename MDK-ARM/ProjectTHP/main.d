@@ -1,6 +1,7 @@
 projectthp\main.o: ../Src/main.c
 projectthp\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 projectthp\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+projectthp\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 projectthp\main.o: ../Inc/main.h
 projectthp\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 projectthp\main.o: ../Inc/stm32f1xx_hal_conf.h
@@ -34,3 +35,5 @@ projectthp\main.o: ../Inc/htu21.h
 projectthp\main.o: ../Inc/ssd1306.h
 projectthp\main.o: ../Inc/fonts.h
 projectthp\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+projectthp\main.o: ../Inc/ind.h
+projectthp\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
